@@ -46,8 +46,12 @@ App = {
         const name = document.getElementById('Name').value;
         let dateOfBirth = document.getElementById('DateOfBirth').value;
         const dateWithoutHyphens = dateOfBirth.replace(/-/g, '');
-        dateOfBirth = parseInt(dateWithoutHyphens);
-
+        dateOfBirth = dateWithoutHyphens;
+        // console.log(web3.toAscii(aadharNumber));
+        // console.log(web3.toAscii(passportNumber));
+        // console.log(web3.toAscii(panCardNumber));
+        // console.log(web3.toAscii(name));
+        // console.log(web3.toAscii(dateOfBirth));
         //window.ethereum.enable();
         web3.eth.getAccounts(function(error,accounts){
 
@@ -61,7 +65,7 @@ App = {
 
             App.contracts.identity.deployed().then(function(instance){
                 IdentityInstance=instance;
-                return IdentityInstance.addIdentity(web3.fromAscii(aadharNumber),web3.fromAscii(passportNumber), web3.fromAscii(panCardNumber), web3.fromAscii(name), dateOfBirth, {from:account});
+                return IdentityInstance.addIdentity(web3.fromAscii(aadharNumber),web3.fromAscii(passportNumber), web3.fromAscii(panCardNumber), web3.fromAscii(name), web3.fromAscii(dateOfBirth), {from:account});
              }).then(function(result){
                 // console.log(result);
 

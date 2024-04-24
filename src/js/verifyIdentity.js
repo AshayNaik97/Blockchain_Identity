@@ -36,8 +36,10 @@ App = {
 
     getData:function(event) {
         event.preventDefault();
-        var UniqueHash = document.getElementById('UniqueHash').value;
-        var aadharNumber = document.getElementById('aadharNumber')
+        const UniqueHash = document.getElementById('UniqueHash').value;
+        const aadharNumber = document.getElementById('aadharNumber').value;
+        var IdentityInstance;
+        // console.log(UniqueHash);
         //window.ethereum.enable();
         web3.eth.getAccounts(function(error,accounts){
 
@@ -46,11 +48,18 @@ App = {
             }
 
             var account=accounts[0];
+            function hex2a(hexx) {
+                var hex = hexx.toString();//force conversion
+                var str = '';
+                for (var i = 0; i < hex.length; i += 2)
+                    str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+                return str;
+            }
             // console.log(account);
             App.contracts.identity.deployed().then(function(instance){
 
                 IdentityInstance=instance;
-                return IdentityInstance.verifyIdentity(web3.fromAscii(aadharNumber),web3.fromAscii(UniqueHash),{from:account});
+                return IdentityInstance.verifyIdentity(web3.fromAscii(aadharNumber),hex2a(UniqueHash),{from:account});
 
             }).then(function(result){
                 
@@ -68,7 +77,7 @@ App = {
                 t+=tr;
 
                 document.getElementById('logdata').innerHTML = t;
-                document.getElementById('add').innerHTML=account;
+                // document.getElementById('add').innerHTML=account;
            }).catch(function(err){
                console.log(err.message);
            })
@@ -76,8 +85,11 @@ App = {
     }
 };
 
+
 $(function() {
     $(window).load(function() {
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+        delay(5000);
         App.init();
     })
 })
