@@ -1,138 +1,138 @@
 <!doctype html>
 <html lang="en">
-  <head>
-  	<title>Blockchain-Based Identity Verification</title>
+<head>
+    <title>Blockchain-Based Identity Verification</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/qr_code_box.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/qr_code_box.css">
 
-	</head>
-	<body>
-	<section class="ftco-section">
-		<div class="container-fluid px-md-5">
-			<div class="row justify-content-between">
-				<div class="col-md-8 order-md-last">
-					<div class="row">
-						<div class="col-md-6 text-center">
-							<a class="navbar-brand" href="index.html">Blockchain-Based Identity Verification <span> </span></a>
-						</div>
-						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
-							<form action="#" class="searchform order-lg-last">
-			          
-			        </form>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex">
-					<div class="social-media">
-		    		
-	        </div>
-				</div>
-			</div>
-		</div>
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container-fluid">
-	    
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="fa fa-bars"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav m-auto">
-				<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          	<li class="nav-item"><a href="verifyIdentity.html" class="nav-link">Verfiy Identity</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+</head>
+<body>
+<section class="ftco-section">
+    <div class="container-fluid px-md-5">
+        <div class="row justify-content-between">
+            <div class="col-md-8 order-md-last">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <a class="navbar-brand" href="index.html">Blockchain-Based Identity Verification <span> </span></a>
+                    </div>
+                    <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+                        <form action="#" class="searchform order-lg-last">
+              
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="social-media">
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container-fluid">
+        
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span> Menu
+          </button>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                  <li class="nav-item"><a href="verifyIdentity.html" class="nav-link">Verfiy Identity</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <!-- END nav -->
 
-	</section>
-    <section>
-        <div class="container">
-            <h2>Add Identity</h2>
+</section>
+<section>
+    <div class="container">
+        <h2>Add Identity</h2>
 
 
 
-			<div class="matrix">
-				<table width="100%">
-					<tr width="100%">
-						<td width="15%" align="center">
-							<label for="Name">Full Name</label>
-						</td>
-						<td width="30%">
-							<input class="form-control" id="Name" name="Name" type="text" />
-						</td>
-						<td width="15%" align="center">
-							<label for="DateOfBirth">Date Of Birth</label>
-						</td>
-						<td width="30%">
-							<input class="form-control" id="DateOfBirth" name="DateOfBirth" type="date" />
-						</td>
-					</tr>
-					
-					<tr width="100%">
-						<td width="15%" align="center">
-							<label for="AadharNumber">Aadhar Number:</label>
-						</td>
-						<td width="30%">
-							<input class="form-control" id="AadharNumber" name="AadharNumber" type="text" />
-						</td>
-						<td width="15%" align="center">
-							<label for="PanCardNumber">PAN Card Number</label>
-						</td>
-						<td width="30%">
-							<input class="form-control" id="PanCardNumber" name="PanCardNumber" type="text" />
-						</td>
-					</tr>
-					
-					<tr width="100%">
-						<td width="15%" align="center">
-							<label for="PassportNumber">Passport Number</label>
-						</td>
-						<td width="30%">
-							<input class="form-control" id="PassportNumber" name="PassportNumber" type="text" />
-						</td>
-					</tr>
-					
-				</table>
-			  </div>
-			  <div class="clear" >&nbsp;</div>
-			  <div align="center">
-				<button type="submit" class="btn btn-warning btn-register" id="register" onclick="fetchQR()">Add Identity</button>
-			  </div>  
-			  <br></br>
+        <div class="matrix">
+            <table width="100%">
+                <tr width="100%">
+                    <td width="15%" align="center">
+                        <label for="Name">Full Name</label>
+                    </td>
+                    <td width="30%">
+                        <input class="form-control" id="Name" name="Name" type="text" />
+                    </td>
+                    <td width="15%" align="center">
+                        <label for="DateOfBirth">Date Of Birth</label>
+                    </td>
+                    <td width="30%">
+                        <input class="form-control" id="DateOfBirth" name="DateOfBirth" type="date" />
+                    </td>
+                </tr>
+                
+                <tr width="100%">
+                    <td width="15%" align="center">
+                        <label for="AadharNumber">Aadhar Number:</label>
+                    </td>
+                    <td width="30%">
+                        <input class="form-control" id="AadharNumber" name="AadharNumber" type="text" />
+                    </td>
+                    <td width="15%" align="center">
+                        <label for="PanCardNumber">PAN Card Number</label>
+                    </td>
+                    <td width="30%">
+                        <input class="form-control" id="PanCardNumber" name="PanCardNumber" type="text" />
+                    </td>
+                </tr>
+                
+                <tr width="100%">
+                    <td width="15%" align="center">
+                        <label for="PassportNumber">Passport Number</label>
+                    </td>
+                    <td width="30%">
+                        <input class="form-control" id="PassportNumber" name="PassportNumber" type="text" />
+                    </td>
+                </tr>
+                
+            </table>
           </div>
-    </section>
+          <div class="clear" >&nbsp;</div>
+          <div align="center">
+            <button type="submit" class="btn btn-warning btn-register" id="register" onclick="fetchQR()">Add Identity</button>
+          </div>  
+          <br></br>
+      </div>
+</section>
 
-<!-- <br></br>	 -->
-	<div class="qr-code">
-		<div align="center">
-			<img align="center" hidden id="imgQR" src="" alt="qr-code" >
-		</div>
-		<br></br>
-		<div align="center">
-			<button align="center" hidden type="submit" class="btn btn-warning" id="download" onclick="saveImage()">Download QR Code</button>
-		</div>
-	</div>
+<!-- <br></br>  -->
+<div class="qr-code">
+    <div align="center">
+        <img align="center" hidden id="imgQR" src="" alt="qr-code" >
+    </div>
+    <br></br>
+    <div align="center">
+        <button align="center" hidden type="submit" class="btn btn-warning" id="download" onclick="saveImage()">Download QR Code</button>
+    </div>
+</div>
 
 <br></br>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/web3.min.js"></script>
-	<script src="js/truffle-contract.js"></script>
-	<script src="js/identityApp.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
-	<script>
-	var src;
-	var fileName;
-	// Function to hash a string using SHA-256
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/identityApp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script>
+    var src;
+    var fileName;
+    // Function to hash a string using SHA-256
 async function sha256(message) {
   const msgBuffer = new TextEncoder().encode(message);
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
@@ -141,8 +141,11 @@ async function sha256(message) {
   return hashHex;
 }
 
+
+
 async function fetchQR(){
   // Getting input values
+  console.log("in qr")
   const aadharNumber = document.getElementById('AadharNumber').value;
   const passportNumber = document.getElementById('PassportNumber').value;
   const panCardNumber = document.getElementById('PanCardNumber').value;
@@ -151,12 +154,15 @@ async function fetchQR(){
   name=namewospace;
   const dateOfBirth = document.getElementById('DateOfBirth').value;
 
+  console.log(typeof(aadharNumber));
+  
+
   // Hashing each input value separately
-  const hashedAadhar = await sha256(aadharNumber);
-  const hashedPassport = await sha256(passportNumber);
-  const hashedPanCard = await sha256(panCardNumber);
-  const hashedName = await sha256(name);
-  const hashedDOB = await sha256(dateOfBirth);
+  const hashedAadhar = await sha256(web3.toAscii(aadharNumber));
+  const hashedPassport = await sha256(web3.toAscii(passportNumber));
+  const hashedPanCard = await sha256(web3.toAscii(panCardNumber));
+  const hashedName = await sha256(web3.toAscii(name));
+  const hashedDOB = await sha256(web3.toAscii(dateOfBirth));
 
   // Concatenating all hashed values
   const concatenatedHashes = hashedAadhar + hashedPassport + hashedPanCard + hashedName + hashedDOB;
@@ -165,7 +171,7 @@ async function fetchQR(){
   const finalHash = await sha256(concatenatedHashes);
 
   // Generating filename based on name and Aadhar number
-	fileName = name && aadharNumber ? name + '_' + aadharNumber : 'qr_code';
+    fileName = name && aadharNumber ? name + '_' + aadharNumber : 'qr_code';
 
   // Generating QR code using the final hash
   const qrImage = document.querySelector(".qr-code");
@@ -183,12 +189,12 @@ async function fetchQR(){
 }
 
 
-	function saveImage(){
-		saveAs(src,fileName);
-		downloadQrImg.setAttribute('hidden', 'hidden');
-		downloadQrBtn.setAttribute('hidden', 'hidden');
-	}
-	</script>
+    function saveImage(){
+        saveAs(src,fileName);
+        downloadQrImg.setAttribute('hidden', 'hidden');
+        downloadQrBtn.setAttribute('hidden', 'hidden');
+    }
+    </script>
 
-  </body>
+</body>
 </html>

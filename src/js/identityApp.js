@@ -20,11 +20,11 @@ App = {
 
     initContract: function() {
 
-        $.getJSON('product.json',function(data){
+        $.getJSON('person.json',function(data){
 
-            var productArtifact=data;
-            App.contracts.product=TruffleContract(productArtifact);
-            App.contracts.product.setProvider(App.web3Provider);
+            var IdentityArtifact=data;
+            App.contracts.identity=TruffleContract(IdentityArtifact);
+            App.contracts.identity.setProvider(App.web3Provider);
         });
 
         return App.bindEvents();
@@ -32,13 +32,13 @@ App = {
 
     bindEvents: function() {
 
-        $(document).on('click','.btn-register',App.registerProduct);
+        $(document).on('click','.btn-register',App.registerIdentity);
     },
 
-    registerProduct: function(event) {
+    registerIdentity: function(event) {
         event.preventDefault();
 
-        var productInstance;
+        var IdentityInstance;
 
         const aadharNumber = document.getElementById('AadharNumber').value;
         const passportNumber = document.getElementById('PassportNumber').value;
@@ -59,9 +59,9 @@ App = {
             var account=accounts[0];
             // console.log(account);
 
-            App.contracts.product.deployed().then(function(instance){
-                productInstance=instance;
-                return productInstance.addProduct(web3.fromAscii(aadharNumber),web3.fromAscii(passportNumber), web3.fromAscii(panCardNumber), web3.fromAscii(name), dateOfBirth, {from:account});
+            App.contracts.identity.deployed().then(function(instance){
+                IdentityInstance=instance;
+                return IdentityInstance.addIdentity(web3.fromAscii(aadharNumber),web3.fromAscii(passportNumber), web3.fromAscii(panCardNumber), web3.fromAscii(name), dateOfBirth, {from:account});
              }).then(function(result){
                 // console.log(result);
 

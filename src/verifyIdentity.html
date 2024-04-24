@@ -65,6 +65,11 @@
 				<label for="UniqueHash">UniqueHash:</label>
                 <input disabled type="text" class="form-control" id="UniqueHash" placeholder="Enter UniqueHash" name="UniqueHash">
               </div>
+			  <div class="form-group">
+				<label for="aadharNumber">aadharNumber:</label>
+                <input type="text" class="form-control" id="aadharNumber" placeholder="Enter aadharNumber" name="aadharNumber">
+              </div>
+
               
               <button type="submit" class="btn btn-warning btn-register" id="register">Get Verification</button>
           </div>
@@ -98,7 +103,7 @@
 	<script src="js/verifyIdentity.js"></script>
 	<script src="https://unpkg.com/html5-qrcode"></script>
 	<script>
-	var decodedText = "Enter Product SN";
+	var decodedText = "Enter Hash";
     function docReady(fn) {
         // see if DOM is already available
         if (document.readyState === "complete"

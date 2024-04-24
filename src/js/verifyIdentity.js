@@ -19,11 +19,11 @@ App = {
 
     initContract: function() {
 
-        $.getJSON('product.json',function(data){
+        $.getJSON('person.json',function(data){
 
-            var productArtifact=data;
-            App.contracts.product=TruffleContract(productArtifact);
-            App.contracts.product.setProvider(App.web3Provider);
+            var IdentityArtifact=data;
+            App.contracts.identity=TruffleContract(IdentityArtifact);
+            App.contracts.identity.setProvider(App.web3Provider);
         });
 
         return App.bindEvents();
@@ -37,6 +37,7 @@ App = {
     getData:function(event) {
         event.preventDefault();
         var UniqueHash = document.getElementById('UniqueHash').value;
+        var aadharNumber = document.getElementById('aadharNumber')
         //window.ethereum.enable();
         web3.eth.getAccounts(function(error,accounts){
 
@@ -46,14 +47,14 @@ App = {
 
             var account=accounts[0];
             // console.log(account);
-            App.contracts.UniqueHash.deployed().then(function(instance){
+            App.contracts.identity.deployed().then(function(instance){
 
-                UniqueHashInstance=instance;
-                return UniqueHashInstance.verifyProduct(web3.fromAscii(UniqueHash),{from:account});
+                IdentityInstance=instance;
+                return IdentityInstance.verifyIdentity(web3.fromAscii(aadharNumber),web3.fromAscii(UniqueHash),{from:account});
 
             }).then(function(result){
                 
-                // console.log(result);
+                console.log(result);
 
                 var t= "";
 

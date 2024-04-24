@@ -1,5 +1,5 @@
-var product=artifacts.require('product');
+var person=artifacts.require('person');
 
 module.exports=function(deployer) {
-    deployer.deploy(product); 
+    deployer.deploy(person); 
 }
