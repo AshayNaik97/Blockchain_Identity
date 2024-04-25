@@ -69,9 +69,9 @@ App = {
 
                 var tr="<tr>";
                 if(result){
-                    tr+="<td>"+ "Genuine Person."+"</td>";
+                    tr+="<td>"+ "Genuine Person Identity verified on Blockchain."+"</td>";
                 }else{
-                    tr+="<td>"+ "Fake Person."+"</td>";
+                    tr+="<td>"+ "Fake Person Identity doesnt match on Blockchain."+"</td>";
                 }
                 tr+="</tr>";
                 t+=tr;

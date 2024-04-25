@@ -2,8 +2,10 @@
 pragma solidity >=0.4.22 <0.9.0;
 contract person {
     mapping(bytes32=>bytes32) public aadharmap;
+
     event identityadded( bytes32 aadharnumber,bytes conc, bytes32 ah,bytes32 ph,bytes32 pch,bytes32 nh,bytes32 dh, bytes32 finalhash);
     // event iden( bytes32 aadharnumber,bytes32 conc);
+
     function addIdentity(bytes32 aadharnumber, bytes32 passportnumber, bytes32 pancard, bytes32 name,
     bytes32 dob) public{
 
@@ -22,6 +24,7 @@ contract person {
         bytes32 finalHash = sha256(concatenated);
 
         aadharmap[aadharnumber] = finalHash;
+        
         emit identityadded(aadharnumber,concatenated,aadharHash,passportHash,pancardHash,nameHash,dobHash, finalHash);
     }
 
