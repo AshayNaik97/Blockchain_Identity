@@ -19,8 +19,6 @@ contract person {
         bytes memory concatenated = abi.encodePacked(aadharHash, passportHash, pancardHash, nameHash, dobHash);
         
         
-        // Hash the concatenated string using SHA-256 to get the final hash
-        // bytes32 finalHash = sha256(concatenated);
         bytes32 finalHash = sha256(concatenated);
 
         aadharmap[aadharnumber] = finalHash;
@@ -40,3 +38,4 @@ contract person {
         }
     }
 }
+
